@@ -36384,7 +36384,7 @@ type HostDigestInfo struct {
 	DigestMethod string `xml:"digestMethod" json:"digestMethod"`
 	// The variable length byte array containing the digest value calculated by
 	// the specified digestMethod.
-	DigestValue []byte `xml:"digestValue" json:"digestValue"`
+	DigestValue []int `xml:"digestValue" json:"digestValue"`
 	// The name of the object from which this digest value is calcaulated.
 	ObjectName string `xml:"objectName,omitempty" json:"objectName,omitempty"`
 }
@@ -45455,7 +45455,7 @@ type HostTpmEventDetails struct {
 	DynamicData
 
 	// Value of the Platform Configuration Register (PCR) for this event.
-	DataHash []byte `xml:"dataHash" json:"dataHash"`
+	DataHash []int `xml:"dataHash" json:"dataHash"`
 	// Method in which the digest hash is calculated.
 	//
 	// The set of possible
